@@ -1,0 +1,11 @@
+%chk=/global/u1/h/hmayes/gaussian/glucose/$chkfile
+%NoSave
+%mem=16GB
+%nprocshared=8
+%nproclinda=2
+# irc(internal,RCFC,$direction,MaxPoints=25,StepSize=15)
+m062x/6-31+g(2df,p) nosymm scrf=(solvent=ethanol)
+geom=allcheck
+guess=read
+
+

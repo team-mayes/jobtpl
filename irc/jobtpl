@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -l walltime=999:00:00
+#PBS -l nodes=1:ppn=8
+#PBS -j oe
+#PBS -m ae
+#PBS -M user@host.net
+#PBS -q batch
+#PBS -V
+
+g09 < $comfile >& $logfile
+
+
