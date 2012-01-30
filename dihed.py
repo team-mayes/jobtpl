@@ -25,12 +25,17 @@ def fill_opts(chk, opts, dihedral, idx, direct):
     basename = "%sd%d%s" % (split_chk[0], idx + 1, direct)
     tpl_params['basechk'] = chk 
     tpl_params['stepcount'] = opts.stepcount
-    tpl_params['angle'] = opts.angle
     tpl_params['chkfile'] = basename + split_chk[1]
     tpl_params['comfile'] = basename + '.com'
     tpl_params['dihedral'] = dihedral
     tpl_params['logfile'] = basename + '.log'
     tpl_params['jobfile'] = basename + '.job'
+    
+    if (direct == 'b'):
+        tpl_params['angle'] = -opts.angle
+    else:
+        tpl_params['angle'] = opts.angle
+        
     return tpl_params
     
 
