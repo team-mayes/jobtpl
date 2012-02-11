@@ -1,8 +1,11 @@
-%chk=$chkfile
-%mem=30GB
-%nproc=8
+%chk=/global/u1/h/hmayes/gaussian/glucose/$chkfile
+%NoSave
+%mem=16GB
+%nprocshared=8
+%nproclinda=2
 # opt=(modredundant,RCFC) m062x/6-31+g(2df,p) nosymm scrf=(solvent=ethanol) scf=xqc geom=allcheck guess=read
 
 D $dihedral S $stepcount $angle
+
 
 

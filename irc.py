@@ -40,7 +40,7 @@ def copy_chk(params, comtpl, jobtpl):
 def parse_cmdline(args):
     usage = "usage: %prog [options] checkfile"
     parser = OptionParser(usage=usage)
-    parser.add_option('-C', '--comtpl', help='.com template file', default='comtpl')
+    parser.add_option('-C', '--comtpl', help='.com template file', default='irccomtpl')
     parser.add_option('-j', '--jobtpl', help='.job template file', default='jobtpl')
     
     (options, args) = parser.parse_args()
